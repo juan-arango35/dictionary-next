@@ -4,6 +4,8 @@ import { WordResponse } from "./model/models";
 import DictionaryResult from "./components/dictoriary/DictionaryResult";
 import Meaning from "./components/Meaning/Meaning";
 import Synonyms from "./components/synonyms/Synonyms";
+import Verbs from "./components/verbs/Verbs";
+import FooterComponent from "./components/ui/footer/Footer";
 
 interface PageProps {
   searchParams: {
@@ -61,6 +63,12 @@ export default async function Home({ searchParams }: PageProps) {
         <h2 className="text-center">Verb</h2>
         <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
       </div>
+      <div>{result && <Verbs results={result} />}</div>
+      <div className="flex items-center">
+        <h2 className="text-center">Nun</h2>
+        <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
+      </div>
+      <FooterComponent results={result}/>
     </div>
   );
 }
