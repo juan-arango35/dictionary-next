@@ -1,5 +1,5 @@
 
-import AudioPlayer from '../audio/AudioPlayer';
+import AudioPlayer from '../words/WordComponent';
 import { WordResponse } from "../../model/models"
 export interface DictionaryResultsProps {
   results: WordResponse[];

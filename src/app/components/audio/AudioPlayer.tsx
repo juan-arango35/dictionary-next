@@ -1,21 +1,34 @@
-import { FiPlayCircle } from "react-icons/fi";
+"use client";
+import { Phonetic } from '@/app/model/models';
+import { useState } from 'react';
 
-interface Props {
-  word: string
-  latin: string;
+interface AudioPlayerProps {
+  audioUrl: string;
 }
 
-const AudioPlayer = ({word, latin}:Props) => {
-  console.log(word, "word");
-  return (
-    <div className=" flex justify-between items-center my-3 w-[21rem] sm:w-[33rem] lg:w-[43rem]">
-      <div className="flex flex-col justify-center  w-full pl-5 pr-5">
-        <span className="font-bold text-2xl">{word}</span>
-        <span className="mt-2.5 text-purple-600">{latin}</span>
-      </div>
-      <FiPlayCircle className="mr-3.5" size={30}/>
-    </div>
-  );
-};
+const AudioPlayer = ({ audioUrl }: AudioPlayerProps) => {
+    const [isPlaying, setIsPlaying] = useState<boolean>(false);
+    if (!audioUrl) return null;
 
-export default AudioPlayer;
+    const playAudio = () => {
+        setIsPlaying(true);
+        const audio = new Audio(audioUrl);
+        audio.onended = () => setIsPlaying(false);
+        audio.play().catch(err => {
+          console.error('Error playing audio:', err);
+          setIsPlaying(false);
+        });
+      };
+  return (
+    <button
+      onClick={playAudio}
+      disabled={isPlaying}
+      className="bg-blue-500 text-white px-4 py-2 rounded-md"
+    >
+      {isPlaying ? "Playing..." : "Play Audio"}
+    </button>
+
+  )
+}
+
+export default AudioPlayer

@@ -6,6 +6,7 @@ import Meaning from "./components/Meaning/Meaning";
 import Synonyms from "./components/synonyms/Synonyms";
 import Verbs from "./components/verbs/Verbs";
 import FooterComponent from "./components/ui/footer/Footer";
+import AudioPlayer from "./components/audio/AudioPlayer";
 
 interface PageProps {
   searchParams: {
@@ -17,6 +18,7 @@ export default async function Home({ searchParams }: PageProps) {
   const searchTerm = searchParams.word || "";
 
   let result: WordResponse[] | null = null;
+
   let error: string | null = null;
 
   if (searchTerm) {
@@ -68,7 +70,9 @@ export default async function Home({ searchParams }: PageProps) {
         <h2 className="text-center">Nun</h2>
         <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
       </div>
-      <FooterComponent results={result}/>
+      {result && <FooterComponent results={result} />}
+      {result && result[0].phonetics[0].audio && <AudioPlayer audioUrl={result[0].phonetics[0].audio} />}
+         
     </div>
   );
 }
