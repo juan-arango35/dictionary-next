@@ -1,3 +1,4 @@
+import AudioPlayer from "./components/audio/AudioPlayer";
 import SearchForm from "./components/search/SearchForm";
 import HeaderComponent from "./components/ui/header/Header";
 
@@ -7,6 +8,8 @@ export default function Home() {
     <div className="min-h-screen bg-gray-100 w-full flex justify-start items-center flex-col">
       <HeaderComponent/>
       <SearchForm/>
+      <AudioPlayer/>
+
  
       
     </div>
