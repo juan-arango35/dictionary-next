@@ -1,5 +1,3 @@
-import { cache } from "react";
-import AudioPlayer from "./components/audio/AudioPlayer";
 import SearchForm from "./components/search/SearchForm";
 import HeaderComponent from "./components/ui/header/Header";
 import { WordResponse } from "./model/models";
@@ -13,6 +11,7 @@ interface PageProps {
 
 export default async function Home({ searchParams }: PageProps) {
   const searchTerm = searchParams.word || "";
+
   let result: WordResponse[] | null = null;
   let error: string | null = null;
 
@@ -47,8 +46,13 @@ export default async function Home({ searchParams }: PageProps) {
           {error}
         </div>
       )}
-      <AudioPlayer />
-      {result && <DictionaryResult  results={result}/>}
+
+      {result && <DictionaryResult results={result} />}
+      <div className="flex items-center">
+        <h2 className="text-center">Nun</h2>
+        <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
+      </div>
+      
     </div>
   );
 }

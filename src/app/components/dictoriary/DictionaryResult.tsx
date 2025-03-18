@@ -1,5 +1,5 @@
 
-import AudioPlayer from "../audio/AudioPlayer"
+import AudioPlayer from '../audio/AudioPlayer';
 import { WordResponse } from "../../model/models"
 interface DictionaryResultsProps {
   results: WordResponse[];
@@ -7,9 +7,12 @@ interface DictionaryResultsProps {
 const DictionaryResult = ({results}: DictionaryResultsProps) => {
   if(!results || results.length === 0)  return null;
   const word = results[0];
+  const latin = results[0].phonetic || "";
+  console.log(latin, "latin");
   return (
     <div>
-       <h2 className="text-xl font-bold text-gray-900">{word.word}</h2>
+      <AudioPlayer word={word.word} latin={latin} />
+      
     </div>
   )
 }
