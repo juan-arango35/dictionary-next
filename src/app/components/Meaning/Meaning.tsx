@@ -5,14 +5,18 @@ const Meaning = ({ results }: DictionaryResultsProps) => {
   const meanings = results[0].meanings[0].definitions;
 
   return (
-    <ul className="w-[40rem] list-disc">
-      {meanings &&
-        meanings.map((meaning, index) => (
-          <li key={index} className="mt-2">
-            {meaning.definition}
-          </li>
-        ))}
-    </ul>
+    <>
+     
+      <ul className=" list-disc w-[22rem]  sm:w-[30rem] lg:w-[40rem]">
+      <h1 className="mt-10 text-2xl">Meaning</h1>
+        {meanings &&
+          meanings.map((meaning, index) => (
+            <li key={index} className="mt-6">
+              {meaning.definition}
+            </li>
+          ))}
+      </ul>
+    </>
   );
 };
 

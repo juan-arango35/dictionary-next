@@ -55,24 +55,22 @@ export default async function Home({ searchParams }: PageProps) {
 
       {result && <DictionaryResult results={result} />}
       <div className="flex items-center">
-        <h2 className="text-center">Nun</h2>
-        <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
+        <h2 className="text-center mr-1.5">Nun</h2>
+        <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
       </div>
       {result && <Meaning results={result} />}
 
       <div>{result && <Synonyms results={result} />}</div>
       <div className="flex items-center">
-        <h2 className="text-center">Verb</h2>
-        <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
+        <h2 className="text-center mr-1.5">verb</h2>
+        <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
       </div>
       <div>{result && <Verbs results={result} />}</div>
       <div className="flex items-center">
-        <h2 className="text-center">Nun</h2>
-        <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
+        
+        <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
       </div>
       {result && <FooterComponent results={result} />}
-     
-         
     </div>
   );
 }
