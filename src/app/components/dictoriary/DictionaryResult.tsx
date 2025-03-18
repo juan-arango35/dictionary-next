@@ -1,7 +1,7 @@
 
 import AudioPlayer from '../audio/AudioPlayer';
 import { WordResponse } from "../../model/models"
-interface DictionaryResultsProps {
+export interface DictionaryResultsProps {
   results: WordResponse[];
 }
 const DictionaryResult = ({results}: DictionaryResultsProps) => {

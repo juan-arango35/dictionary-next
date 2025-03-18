@@ -2,6 +2,7 @@ import SearchForm from "./components/search/SearchForm";
 import HeaderComponent from "./components/ui/header/Header";
 import { WordResponse } from "./model/models";
 import DictionaryResult from "./components/dictoriary/DictionaryResult";
+import Meaning from "./components/Meaning/Meaning";
 
 interface PageProps {
   searchParams: {
@@ -52,7 +53,8 @@ export default async function Home({ searchParams }: PageProps) {
         <h2 className="text-center">Nun</h2>
         <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
       </div>
-      
+      {result && <Meaning results={result} />}
+
     </div>
   );
 }
