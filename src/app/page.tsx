@@ -3,6 +3,7 @@ import HeaderComponent from "./components/ui/header/Header";
 import { WordResponse } from "./model/models";
 import DictionaryResult from "./components/dictoriary/DictionaryResult";
 import Meaning from "./components/Meaning/Meaning";
+import Synonyms from "./components/synonyms/Synonyms";
 
 interface PageProps {
   searchParams: {
@@ -55,6 +56,11 @@ export default async function Home({ searchParams }: PageProps) {
       </div>
       {result && <Meaning results={result} />}
 
+      <div>{result && <Synonyms results={result} />}</div>
+      <div className="flex items-center">
+        <h2 className="text-center">Verb</h2>
+        <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
+      </div>
     </div>
   );
 }
