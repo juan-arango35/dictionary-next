@@ -71,7 +71,7 @@ export default async function Home({ searchParams }: PageProps) {
         <span className="w-[40rem] h-1  bg-amber-300 flex"></span>
       </div>
       {result && <FooterComponent results={result} />}
-      {result && result[0].phonetics[0].audio && <AudioPlayer audioUrl={result[0].phonetics[0].audio} />}
+     
          
     </div>
   );

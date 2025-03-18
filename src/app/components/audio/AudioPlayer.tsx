@@ -1,34 +1,33 @@
 "use client";
-import { Phonetic } from '@/app/model/models';
-import { useState } from 'react';
+
+import { useState } from "react";
+import { FiPlayCircle } from "react-icons/fi";
 
 interface AudioPlayerProps {
   audioUrl: string;
 }
 
 const AudioPlayer = ({ audioUrl }: AudioPlayerProps) => {
-    const [isPlaying, setIsPlaying] = useState<boolean>(false);
-    if (!audioUrl) return null;
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  if (!audioUrl) return null;
 
-    const playAudio = () => {
-        setIsPlaying(true);
-        const audio = new Audio(audioUrl);
-        audio.onended = () => setIsPlaying(false);
-        audio.play().catch(err => {
-          console.error('Error playing audio:', err);
-          setIsPlaying(false);
-        });
-      };
+  const playAudio = () => {
+    setIsPlaying(true);
+    const audio = new Audio(audioUrl);
+    audio.onended = () => setIsPlaying(false);
+    audio.play().catch((err) => {
+      console.error("Error playing audio:", err);
+      setIsPlaying(false);
+    });
+  };
   return (
-    <button
+    <FiPlayCircle
+      className={`mr-3.5 ${isPlaying ? "opacity-50 cursor-not-allowed" : ""}`}
+      size={30}
       onClick={playAudio}
-      disabled={isPlaying}
-      className="bg-blue-500 text-white px-4 py-2 rounded-md"
-    >
-      {isPlaying ? "Playing..." : "Play Audio"}
-    </button>
+     
+    />
+  );
+};
 
-  )
-}
-
-export default AudioPlayer
+export default AudioPlayer;
