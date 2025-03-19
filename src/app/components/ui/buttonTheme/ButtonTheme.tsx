@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { FaMoon, FaRegMoon } from "react-icons/fa6";
 
 export default function ButtonTheme() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {

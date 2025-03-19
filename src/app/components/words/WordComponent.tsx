@@ -1,4 +1,4 @@
-import { FiPlayCircle } from "react-icons/fi";
+
 import AudioPlayer from "../audio/AudioPlayer";
 
 interface Props {
