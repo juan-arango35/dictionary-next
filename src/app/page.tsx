@@ -43,8 +43,8 @@ export default async function Home({ searchParams }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-200     w-full flex justify-start items-center flex-col">
-      <HeaderComponent />
+    <div className="min-h-screen bg-gray-200  dark:bg-slate-400   w-full flex justify-start items-center flex-col">
+      <HeaderComponent  />
       <SearchForm initialSearch={searchTerm} />
       {error && (
         <div className="p-3 bg-red-100 border border-red-200 text-red-700 rounded">

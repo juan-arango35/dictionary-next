@@ -1,10 +1,13 @@
-import React from "react";
-import { FaRegMoon } from "react-icons/fa";
+"use client";
+
 import { LuBookMinus } from "react-icons/lu";
-import { RxSwitch } from "react-icons/rx";
+
 import ButtonTheme from "../buttonTheme/ButtonTheme";
+import { LiaToggleOffSolid, LiaToggleOnSolid } from "react-icons/lia";
+import { useTheme } from "next-themes";
 
 const HeaderComponent = () => {
+  const { theme } = useTheme();
   return (
     <div className="flex justify-between items-center p-4 w-[28rem] sm:w-[40rem] lg:w-[50rem] ">
       <span>
@@ -18,7 +21,11 @@ const HeaderComponent = () => {
           </select>
         </span>
         <span className="flex justify-center items-center gap-5">
-          <RxSwitch size={30} />
+          {theme === "light" ? (
+            <LiaToggleOffSolid size={30} />
+          ) : (
+            <LiaToggleOnSolid size={30} />
+          )}
 
           <ButtonTheme />
         </span>
