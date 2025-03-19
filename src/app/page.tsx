@@ -6,7 +6,7 @@ import Meaning from "./components/Meaning/Meaning";
 import Synonyms from "./components/synonyms/Synonyms";
 import Verbs from "./components/verbs/Verbs";
 import FooterComponent from "./components/ui/footer/Footer";
-import { historyService } from "./services/HistoryService";
+
 import SearchHistory from "./components/history/SearchHistory";
 
 interface PageProps {
@@ -45,7 +45,7 @@ export default async function Home({ searchParams }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-200  dark:bg-slate-400   w-full flex justify-start items-center flex-col">
+    <div className="min-h-screen bg-gray-200  dark:bg-slate-400  w-full flex justify-start items-center flex-col">
       <HeaderComponent />
       <SearchForm initialSearch={searchTerm} />
        {/* Componente de historial (client component) */}

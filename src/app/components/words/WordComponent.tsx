@@ -17,7 +17,7 @@ const WordComponent = ({ word, latin }: Props) => {
   return (
     <div className="flex justify-between items-center my-3 w-[24rem] sm:w-[33rem] lg:w-[43rem]">
       <div className="flex flex-col justify-center  w-full pl-5 pr-5">
-        <span className="font-bold text-3xl">{word.text}</span>
+        <span className="font-bold text-3xl transition-transform duration-300 hover:text-blue-800">{word.text}</span>
         <span className="mt-2.5 text-purple-600">{latin}</span>
       </div>
 

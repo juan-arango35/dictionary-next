@@ -15,7 +15,7 @@ const DictionaryResult = ({ results }: DictionaryResultsProps) => {
         latin={latin}
       />
       <div className="flex items-center">
-        <h2 className="text-center mr-1.5">noun</h2>
+        <h2 className="text-center mr-1.5 transition-transform duration-300 hover:scale-110">noun</h2>
         <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
       </div>
     </div>

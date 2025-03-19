@@ -5,7 +5,7 @@ const Synonyms = ({ results }: DictionaryResultsProps) => {
 
   return (
     <div className="flex mt-4 w-[22rem]  sm:w-[30rem] lg:w-[40rem] items-center mb-8">
-      <h1 className="text-2xl mr-2.5">Synonymos </h1>
+      <h1 className="text-2xl mr-2.5 hover:text-blue-800 transition-transform duration-300 hover:font-bold">Synonymos </h1>
       <ul className="text-purple-600 font-bold ml-2.5 flex gap-3 flex-wrap ">
         {synonyms.map((sin, index) => (
           <li key={index}>{sin}</li>
