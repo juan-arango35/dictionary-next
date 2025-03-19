@@ -9,7 +9,7 @@ const DictionaryResult = ({ results }: DictionaryResultsProps) => {
   const latin = results[0].phonetic || "";
 
   return (
-    <div>
+    <div >
       <WordComponent
         word={{ text: word.word, phonetics: word.phonetics }}
         latin={latin}

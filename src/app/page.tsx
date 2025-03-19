@@ -43,7 +43,7 @@ export default async function Home({ searchParams }: PageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 w-full flex justify-start items-center flex-col">
+    <div className="min-h-screen bg-gray-200     w-full flex justify-start items-center flex-col">
       <HeaderComponent />
       <SearchForm initialSearch={searchTerm} />
       {error && (
@@ -53,21 +53,13 @@ export default async function Home({ searchParams }: PageProps) {
       )}
 
       {result && <DictionaryResult results={result} />}
-    {/*   <div className="flex items-center">
-        <h2 className="text-center mr-1.5">noun</h2>
-        <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
-      </div> */}
+   
       {result && <Meaning results={result} />}
 
       <div>{result && <Synonyms results={result} />}</div>
-      {/* <div className="flex items-center">
-        <h2 className="text-center mr-1.5">verb</h2>
-        <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
-      </div> */}
+      
       <div>{result && <Verbs results={result} />}</div>
-    {/*   <div className="flex items-center">
-        <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
-      </div> */}
+   
       {result && <FooterComponent results={result} />}
     </div>
   );
