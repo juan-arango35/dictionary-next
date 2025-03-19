@@ -67,7 +67,6 @@ export default async function Home({ searchParams }: PageProps) {
       </div>
       <div>{result && <Verbs results={result} />}</div>
       <div className="flex items-center">
-        
         <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
       </div>
       {result && <FooterComponent results={result} />}

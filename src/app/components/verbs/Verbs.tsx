@@ -5,15 +5,15 @@ const Verbs = ({ results }: DictionaryResultsProps) => {
   const verbs = results[0].meanings[1].definitions[0] ;
 
   return (
-    <div>
-      <h1>Meaning :</h1>
+    <ul className="list-disc w-[22rem]  sm:w-[30rem] lg:w-[40rem] mb-8">
+      <h1 className="mt-10 text-2xl">Meaning</h1>
       {verbs && (
-        <div className="flex flex-col">
-          <span>{verbs.definition}</span> 
-           <span>{verbs.example}</span>
-        </div>
+        <li className="flex flex-col mt-6">
+          <span className="before:content-['•'] before:mr-2 -ml-3.5">{verbs.definition}</span> 
+           <span className="mt-6">{verbs.example}</span>
+        </li>
       )}
-    </div>
+    </ul>
   );
 };
 

@@ -6,11 +6,11 @@ const FooterComponent = ({results}: DictionaryResultsProps) => {
   const source = results[0].sourceUrls[0]
   console.log(source, "source")
   return (
-    <div>
-      <h1>Source :</h1>
+    <div className="flex mt-4 w-[22rem]  sm:w-[30rem] lg:w-[40rem]  mb-8 flex-col items-start">
+      <h1 className="mb-3">Source :</h1>
 
       {source && (
-        <p>{source}</p>
+        <a href={`https://en.wiktionary.org/wiki/${results[0].word} `} target="_blank" className="underline">{source}</a>
       )}
     </div>
   )
