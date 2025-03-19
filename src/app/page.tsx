@@ -7,7 +7,6 @@ import Synonyms from "./components/synonyms/Synonyms";
 import Verbs from "./components/verbs/Verbs";
 import FooterComponent from "./components/ui/footer/Footer";
 
-
 interface PageProps {
   searchParams: {
     word?: string;
@@ -54,21 +53,21 @@ export default async function Home({ searchParams }: PageProps) {
       )}
 
       {result && <DictionaryResult results={result} />}
-      <div className="flex items-center">
+    {/*   <div className="flex items-center">
         <h2 className="text-center mr-1.5">noun</h2>
         <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
-      </div>
+      </div> */}
       {result && <Meaning results={result} />}
 
       <div>{result && <Synonyms results={result} />}</div>
-      <div className="flex items-center">
+      {/* <div className="flex items-center">
         <h2 className="text-center mr-1.5">verb</h2>
         <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
-      </div>
+      </div> */}
       <div>{result && <Verbs results={result} />}</div>
-      <div className="flex items-center">
+    {/*   <div className="flex items-center">
         <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
-      </div>
+      </div> */}
       {result && <FooterComponent results={result} />}
     </div>
   );

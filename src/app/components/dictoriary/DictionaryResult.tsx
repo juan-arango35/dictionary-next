@@ -14,6 +14,10 @@ const DictionaryResult = ({ results }: DictionaryResultsProps) => {
         word={{ text: word.word, phonetics: word.phonetics }}
         latin={latin}
       />
+      <div className="flex items-center">
+        <h2 className="text-center mr-1.5">noun</h2>
+        <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
+      </div>
     </div>
   );
 };

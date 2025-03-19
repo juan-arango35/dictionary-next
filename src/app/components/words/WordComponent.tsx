@@ -15,7 +15,7 @@ interface Props {
 const WordComponent = ({ word, latin }: Props) => {
   console.log(word, "word");
   return (
-    <div className=" flex justify-between items-center my-3 w-[24rem] sm:w-[33rem] lg:w-[43rem]">
+    <div className="flex justify-between items-center my-3 w-[24rem] sm:w-[33rem] lg:w-[43rem]">
       <div className="flex flex-col justify-center  w-full pl-5 pr-5">
         <span className="font-bold text-3xl">{word.text}</span>
         <span className="mt-2.5 text-purple-600">{latin}</span>
