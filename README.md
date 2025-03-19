@@ -7,6 +7,7 @@ APLICA LOS COMANDOS:
 ```bash
 git clone git@github.com:juan-arango35/dictionary-next.git
 # luego
+cd dictionaryapi
 npm install
 # luego
 npm run dev
