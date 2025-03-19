@@ -116,6 +116,7 @@ const SearchForm = ({ initialSearch = "" }: SearchFormProps) => {
             placeholder="search"
             className="bg-gray-300 w-[25rem] sm:w-[32rem] lg:w-[42rem] h-12 pl-5 rounded-2xl dark: text-black"
           />
+          {loading && <span>....</span>}
 
           <FaMagnifyingGlass className="absolute -right-4 sm:right-5 top-3.5" />
         </form>

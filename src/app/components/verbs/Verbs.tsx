@@ -15,7 +15,7 @@ const Verbs = ({ results }: DictionaryResultsProps) => {
       {verbs && (
         <li className="flex flex-col mt-6">
           <span className="before:content-['•'] before:mr-2 -ml-3.5 hover:text-black hover:font-bold">{verbs.definition}</span> 
-           <span className="mt-6 text-gray-500 hover:text-blue-900 hover:font-bold">"{verbs.example}"</span>
+           <span className="mt-6 text-gray-500 hover:text-blue-900 hover:font-bold">{verbs.example}</span>
         </li>
       )}
     </ul>
