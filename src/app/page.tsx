@@ -6,7 +6,7 @@ import Meaning from "./components/Meaning/Meaning";
 import Synonyms from "./components/synonyms/Synonyms";
 import Verbs from "./components/verbs/Verbs";
 import FooterComponent from "./components/ui/footer/Footer";
-import AudioPlayer from "./components/audio/AudioPlayer";
+
 
 interface PageProps {
   searchParams: {
@@ -55,7 +55,7 @@ export default async function Home({ searchParams }: PageProps) {
 
       {result && <DictionaryResult results={result} />}
       <div className="flex items-center">
-        <h2 className="text-center mr-1.5">Nun</h2>
+        <h2 className="text-center mr-1.5">noun</h2>
         <span className="h-[1px]  bg-gray-300 flex w-[22rem]  sm:w-[30rem] lg:w-[40rem]"></span>
       </div>
       {result && <Meaning results={result} />}

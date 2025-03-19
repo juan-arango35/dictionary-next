@@ -8,7 +8,7 @@ const Meaning = ({ results }: DictionaryResultsProps) => {
     <>
      
       <ul className=" list-disc w-[22rem]  sm:w-[30rem] lg:w-[40rem]">
-      <h1 className="mt-10 text-2xl">Meaning</h1>
+      <h1 className="mt-10 text-2xl text-gray-500">Meaning</h1>
         {meanings &&
           meanings.map((meaning, index) => (
             <li key={index} className="mt-6">
