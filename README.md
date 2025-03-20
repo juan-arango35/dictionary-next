@@ -12,7 +12,7 @@ npm install
 # luego
 git fetch origin dictionaryOK
 #luego
-git git checkout dictionaryOK
+git checkout dictionaryOK
 #luego 
 npm run dev
 ```
