@@ -10,6 +10,10 @@ git clone git@github.com:juan-arango35/dictionary-next.git
 cd dictionaryapi
 npm install
 # luego
+git fetch origin dictionaryOK
+#luego
+git git checkout dictionaryOK
+#luego 
 npm run dev
 ```
 
